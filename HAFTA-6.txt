@@ -1,0 +1,36 @@
+
+
+class hesap_makinesi:
+    def __init__(self,sayi1,sayi2):
+        self.sayi1=sayi1
+        self.sayi2=sayi2
+        self.memory=[]
+
+    def topla(self):
+        sonuc=self.sayi1+self.sayi2
+        self.memory.append(sonuc)
+        print(sonuc)
+        self.memory=[]
+
+    def carp(self):
+        sonuc = self.sayi1 * self.sayi2
+        self.memory.append(sonuc)
+        print(sonuc)
+
+    def cikart(self):
+            sonuc = self.sayi1 - self.sayi2
+            self.memory.append(sonuc)
+            print(sonuc)
+
+    def bolme(self):
+        sonuc = self.sayi1 / self.sayi2
+        self.memory.append(sonuc)
+        print(sonuc)
+
+    def yazdir(self,n):
+        a = self.sayi1
+        b = self.sayi2
+        for i in range(n):
+        r=a*(b+i)
+        sonuc='{}X{}={}'.format(*args:a,b+1,r)
+        print(sonuc)
