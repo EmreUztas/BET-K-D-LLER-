@@ -1,0 +1,16 @@
+a=prompt('m? y?')
+
+
+if (a==='muahmmed') {
+ for (let i=0;i<a.length;i++){
+alert(a[i]);
+}}
+} else if (a==='Yusuf') {
+ str=' '
+for(let i=0;i<a.length;i++){
+str +=a[i]
+alert(str);
+}}
+ else {
+ alert('yanlış isim seçtiniz');
+}
