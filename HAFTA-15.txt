@@ -1,0 +1,35 @@
+import random
+
+mahkumlar = []
+
+for i in range(6):
+    sec= input("Okunan mahhkum ismini yaz")
+    mahkumlar.append(sec)
+    print(f"Secilen mahkum {sec} sahneye cikartildi.")
+
+print("subay silahi cikarip rus ruleti icin hazir hale getirdi")
+
+silahpatladi = 0
+sayac = 1
+doluMermiSirasi = random.randint(1, 6)
+kurtulanlar = ""
+
+while silahpatladi==0:
+
+    if doluMermiSirasi==sayac:
+        print(f"{sayac}. Kisi oldu. Digerleri kurtuldu.")
+        olenkisi = mahkumlar[sayac-1]
+        print(f"Olen kisi {olenkisi}")
+
+        kurtulanlar = mahkumlar
+        kurtulanlar.remove(olenkisi)
+        print(f"kurtulanlar {kurtulanlar}")
+
+        silahpatladi=1
+
+    else:
+        print(f"{sayac}. Mahkum kurtuldu {sayac + 1}. sıradakine gecildi")
+        print(f"Kurtulan isim {mahkumlar[sayac-1]}")
+        sayac = sayac+1
+
+
